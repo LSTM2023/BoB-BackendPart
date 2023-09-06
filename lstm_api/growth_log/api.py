@@ -33,3 +33,8 @@ class GrowthLogInfoViewSet(viewsets.ModelViewSet):
         growth_info = GrowthLog.objects.filter(baby_id=kwargs["babyid"])
         serializer = self.serializer_class(growth_info, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def delete(self, request, *args, **kwargs):
+        growth_log = GrowthLog.objects.get(id=request.data['growthlog_id'])
+        growth_log.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

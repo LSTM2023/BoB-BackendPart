@@ -131,3 +131,12 @@ class BabyRearer(viewsets.ModelViewSet):
         baby_info = BabyProfile.objects.get(id=kwargs["babyid"])
         serializer = self.serializer_class(baby_info)
         return Response(serializer.data)
+
+    def delete(self, request, *args, **kwargs):
+        relation_info = generics.get_object_or_404(
+                                    UserBabyRelationship,
+                                    Q(user_id=request.user.id) &
+                                    Q(baby_id=request.data['babyid']))
+        relation_info.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+

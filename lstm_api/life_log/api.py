@@ -57,3 +57,8 @@ class LifeLogInfoViewSet(viewsets.ModelViewSet):
         life_info = LifeLog.objects.get(baby_id=kwargs["babyid"])
         serializer = self.serializer_class(life_info)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def delete(self, request, *args, **kwargs):
+        life_log = LifeLog.objects.get(id=request.data['lifelog_id'])
+        life_log.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

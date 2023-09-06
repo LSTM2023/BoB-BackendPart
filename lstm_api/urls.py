@@ -29,17 +29,21 @@ urlpatterns = [
         path('baby/rearer/', baby_api.BabyRearer.as_view({'post': 'list_rearer'})),
 
         path('baby/activate/', baby_api.BabyRearer.as_view({'post': 'activate'})),
+        path('baby/rearer/delete/', baby_api.BabyRearer.as_view({'post': 'delete'})),
 
         path('life/list/', lifelog_api.LifeLogInfoViewSet.as_view({'get': 'list'})),
         path('life/lists/', lifelog_api.LifeLogInfoViewSet.as_view({'post': 'list_specific'})),
         path('life/set/', lifelog_api.LifeLogInfoViewSet.as_view({'post': 'set'})),
         path('life/<int:babyid>/get/', lifelog_api.LifeLogInfoViewSet.as_view({'post': 'retrieve'})),
+        path('life/delete/', lifelog_api.LifeLogInfoViewSet.as_view({'post': 'delete'})),
 
         path('growth/list/', growthlog_api.GrowthLogInfoViewSet.as_view({'get': 'list'})),
         path('growth/set/', growthlog_api.GrowthLogInfoViewSet.as_view({'post': 'set'})),
         path('growth/<int:babyid>/get/', growthlog_api.GrowthLogInfoViewSet.as_view({'post': 'retrieve'})),
+        path('growth/delete/', growthlog_api.GrowthLogInfoViewSet.as_view({'post': 'delete'})),
 
         path('health/list/', health_check_api.HealthCheckInfoViewSet.as_view({'get': 'list'})),
         path('health/set/', health_check_api.HealthCheckInfoViewSet.as_view({'post': 'set'})),
         path('health/<int:babyid>/get/', health_check_api.HealthCheckInfoViewSet.as_view({'post': 'retrieve'})),
+        path('health/delete/', health_check_api.HealthCheckInfoViewSet.as_view({'post': 'delete'})),
     ]

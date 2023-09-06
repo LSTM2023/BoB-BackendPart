@@ -32,3 +32,8 @@ class HealthCheckInfoViewSet(viewsets.ModelViewSet):
         health_check_info = HealthCheck.objects.filter(baby_id=kwargs["babyid"])
         serializer = self.serializer_class(health_check_info, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def delete(self, request, *args, **kwargs):
+        health_check_info = HealthCheck.objects.get(id=request.data['healthcheck_id'])
+        health_check_info.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
