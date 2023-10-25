@@ -47,6 +47,8 @@ class DailyNoteInfoViewSet(viewsets.ModelViewSet):
                                     Q(user_id=request.user.id) &
                                     Q(baby_id=request.data['babyid']))
         
+        print(dir(relation_info.pk))
+        request.data["userbaby_relation"] = relation_info.pk
         serializer = self.serializer_class(data=request.data)
         
         if not serializer.is_valid():
@@ -59,7 +61,7 @@ class DailyNoteInfoViewSet(viewsets.ModelViewSet):
         #obj.photo = request.FILES['photo']
         #obj.date = timezone.now()
         obj.userbaby_relation = relation_info
-        obj.save()
+        #obj.save()
 
         return Response({'result': 'success', 'success_id': obj.id}, status=status.HTTP_200_OK)
     
@@ -113,4 +115,5 @@ class DailyNoteInfoViewSet(viewsets.ModelViewSet):
 
         daily_info.delete()
 
+        
         return Response({'result': 'success'} , status=status.HTTP_200_OK)
