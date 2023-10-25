@@ -69,7 +69,6 @@ class BabyProfile(models.Model):
 class UserBabyRelationship(models.Model):
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE) 
     baby = models.ForeignKey(BabyProfile, blank=True, null=True, on_delete=models.CASCADE)
-    #relation = models.CharField(default='N', max_length=1, null=True, blank=True)
     
     relation = models.IntegerField(verbose_name='관계',default=0, blank=True, null=True)
     access_date = models.IntegerField(verbose_name='날짜', blank=True, null=True)
@@ -111,5 +110,11 @@ class HealthCheck(models.Model):
     class Meta:
         db_table = 'healthCheck'
 
-
+class DailyNote(models.Model):
+    userbaby_relation = models.ForeignKey(UserBabyRelationship, blank=True, null=True, on_delete=models.CASCADE)
+    date = models.DateField(verbose_name='날짜', auto_now=False)
+    title = models.TextField(verbose_name="일기 제목", blank=True, null=True)
+    content = models.TextField(verbose_name="일기 내용", blank=True, null=True)
+    #photo = models.TextField(verbose_name="사진 경로", blank=True, null=True)
+    photo = models.ImageField(verbose_name="사진", upload_to = "images/%Y-%m-%d/", null=True, blank=True)
 

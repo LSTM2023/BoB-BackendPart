@@ -8,14 +8,15 @@ from django.contrib.auth.forms import UserChangeForm, ReadOnlyPasswordHashField
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
-        fields = ['id', 'name', 'email', 'phone', 'password', 'token']
+        fields = ['id', 'name', 'email', 'phone', 'password', 'token', 'qaAnswer', 'qatype']
+
 
 class UserEditSerializer(UserChangeForm):
     password = ReadOnlyPasswordHashField()
 
     class Meta:
         model = UserProfile
-        fields = ['name', 'phone', 'password']
+        fields = ['name', 'phone', 'password', 'qaAnswer', 'qatype']
 
     def clean_password(self):
         return self.initial["password"]
