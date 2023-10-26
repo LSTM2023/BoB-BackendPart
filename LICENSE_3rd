@@ -1,0 +1,46 @@
+========================================================================
+BSD 3-Clause licenses
+========================================================================
+The following components are provided under the BSD 3-Clause license.  See project links for details.
+
+	(BSD 3-Clause License) https://www.djangoproject.com/
+	(BSD 3-Clause License) https://github.com/axnsan12/drf-yasg/blob/master/LICENSE.rst
+
+========================================================================
+MIT licenses
+========================================================================
+The following components are provided under the MIT License. See project link for details.
+
+	(MIT License) https://github.com/pennersr/django-allauth/blob/main/LICENSE
+	(MIT License) https://github.com/jazzband/djangorestframework-simplejwt/blob/master/LICENSE.txt
+	(MIT License) https://github.com/iMerica/dj-rest-auth/blob/master/LICENSE
+
+========================================================================
+Apache licenses
+========================================================================
+The following components are provided under the Apache License. See project link for details.
+
+	(Apache 2.0) https://www.docker.com/
+	(Apache 2.0) https://github.com/docker/compose/tree/main
+
+========================================================================
+HPND licenses
+========================================================================
+The following components are provided under the HPND License. See project link for details.
+
+	(HPND License) https://github.com/python-pillow/Pillow/blob/main/LICENSE
+	
+========================================================================
+LGPL licenses
+========================================================================
+The following components are provided under the LGPL License. See project link for details.
+
+	(LGPL License) https://www.psycopg.org/license/
+
+========================================================================
+Other licenses
+========================================================================
+The following components are provided under the Other License. See project link for details.
+
+	(The Postgresql License) https://www.postgresql.org/
+	(Own License) https://github.com/encode/django-rest-framework/blob/master/LICENSE.md
