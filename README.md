@@ -9,8 +9,7 @@ A repository for the BoB API server using Django and Postgresql
 - [Directory Structure](#directory-structure)
 - [License](#license)
 
-## System Architecture
-
+## Development Environment
 - Python Django
 - postgresql
 
@@ -228,4 +227,4 @@ BoB-Backend
 ```
 
 ## License
-BoB-BackendPart is released under the LGPL-3.0 License.
+BoB-BackendPart is released under the LGPL-3.0 License[link](https://github.com/LSTM2023/BoB-BackendPart/blob/main/LICENSE).
