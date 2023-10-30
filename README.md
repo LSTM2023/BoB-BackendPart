@@ -227,4 +227,4 @@ BoB-Backend
 ```
 
 ## License
-BoB-BackendPart is released under the LGPL-3.0 License[link](https://github.com/LSTM2023/BoB-BackendPart/blob/main/LICENSE).
+BoB-BackendPart is released under the LGPL-3.0 License [link](https://github.com/LSTM2023/BoB-BackendPart/blob/main/LICENSE).
